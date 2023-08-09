@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2021 The Android Open Source Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +11,10 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
---><resources>
+-->
+<resources>
     <!-- Bus stop list items -->
     <dimen name="bus_stop_item_horizontal_padding">16dp</dimen>
     <dimen name="bus_stop_item_vertical_padding">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

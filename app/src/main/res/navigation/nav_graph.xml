@@ -37,4 +37,10 @@
             android:name="stopName"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/customerFragment6"
+        android:name="com.example.busschedule.CustomerFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" />
+
 </navigation>
