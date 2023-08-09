@@ -28,6 +28,7 @@ import com.example.busschedule.databinding.StopScheduleFragmentBinding
 import com.example.busschedule.viewmodels.BusScheduleViewModel
 import com.example.busschedule.viewmodels.BusScheduleViewModelFactory
 import com.example.busschedule.viewmodels.BusStopAdapter
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -64,6 +65,7 @@ class StopScheduleFragment: Fragment() {
         return view
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = binding.recyclerView
@@ -71,7 +73,7 @@ class StopScheduleFragment: Fragment() {
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val busStopAdapter = BusStopAdapter({})
-        recyclerView.adapter = busStopAdapter
+        this.recyclerView.adapter = busStopAdapter
 
         GlobalScope.launch(Dispatchers.IO) {
             lifecycle.coroutineScope.launch {
