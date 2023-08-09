@@ -2,10 +2,18 @@ package com.example.busschedule.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import okhttp3.ResponseBody
+import retrofit2.Response
 
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
+
+
+// referrences:
+// https://johncodeos.com/how-to-make-post-get-put-and-delete-requests-with-retrofit-using-kotlin/
+// https://www.c-sharpcorner.com/article/call-post-api-in-android-using-retrofit/
 
 private const val BASE_URL =
     "https://sapulidi.site/api/"
@@ -21,7 +29,7 @@ private val retrofit = Retrofit.Builder()
 
 interface SapuLidiApiService {
     @GET("customer/list/{txt}")
-    suspend fun getCustomers(txt: String) : List<Customer>
+    suspend fun getCustomers(@Path("txt") customerName: String) : List<Customer>
 
 //    companion object {
 //    }
