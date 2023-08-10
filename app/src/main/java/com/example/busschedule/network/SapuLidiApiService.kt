@@ -14,6 +14,7 @@ import retrofit2.http.Path
 // referrences:
 // https://johncodeos.com/how-to-make-post-get-put-and-delete-requests-with-retrofit-using-kotlin/
 // https://www.c-sharpcorner.com/article/call-post-api-in-android-using-retrofit/
+// https://www.freecodecamp.org/news/kriptofolio-app-series-part-5/
 
 private const val BASE_URL =
     "https://sapulidi.site/api/"
